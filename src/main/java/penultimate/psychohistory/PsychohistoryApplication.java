@@ -3,7 +3,6 @@ package penultimate.psychohistory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
 @SpringBootApplication
 public class PsychohistoryApplication {
 
@@ -20,7 +19,7 @@ public class PsychohistoryApplication {
 		du.getSystemsPopluatedFromURL();
 		System.out.println("Complete SystemsPopulated");
 		System.out.println("Completed");
-	    //SpringApplication.run(PsychohistoryApplication.class, args);
+	    SpringApplication.run(PsychohistoryApplication.class, args);
 
 	}
 }
