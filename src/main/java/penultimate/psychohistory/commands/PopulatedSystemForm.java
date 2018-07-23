@@ -1,11 +1,7 @@
-package penultimate.psychohistory;
+package penultimate.psychohistory.commands;
 
-import org.neo4j.ogm.annotation.GraphId;
-import org.neo4j.ogm.annotation.NodeEntity;
+public class PopulatedSystemForm {
 
-@NodeEntity
-public class PopulatedSystem {
-    @GraphId
     private long id;
     private long edsm_id;
     private String name;

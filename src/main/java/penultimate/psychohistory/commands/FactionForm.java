@@ -1,11 +1,8 @@
-package penultimate.psychohistory;
+package penultimate.psychohistory.commands;
 
-import org.neo4j.ogm.annotation.GraphId;
-import org.neo4j.ogm.annotation.NodeEntity;
 
-@NodeEntity
-public class Faction {
-    @GraphId
+public class FactionForm {
+
     private long id;
     private String name;
     private long updated_at;
@@ -98,7 +95,7 @@ public class Faction {
         this.home_system_id = home_system_id;
     }
 
-    public boolean isIs_player_faction() {
+    public boolean is_player_faction() {
         return is_player_faction;
     }
 

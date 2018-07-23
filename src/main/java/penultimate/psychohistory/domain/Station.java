@@ -1,11 +1,12 @@
-package penultimate.psychohistory;
+package penultimate.psychohistory.domain;
 
-import org.neo4j.ogm.annotation.GraphId;
+import org.neo4j.ogm.annotation.Id;
+import org.neo4j.ogm.annotation.GeneratedValue;
 import org.neo4j.ogm.annotation.NodeEntity;
 
 @NodeEntity
 public class Station {
-    @GraphId
+    @Id @GeneratedValue
     private long id;
     private String name;
     private int system_id;

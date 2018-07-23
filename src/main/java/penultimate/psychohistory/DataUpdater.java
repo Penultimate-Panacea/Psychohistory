@@ -11,6 +11,50 @@ import java.nio.channels.ReadableByteChannel;
 
 
 public class DataUpdater{
+    public void getJSONFromURL(String sourceURL){
+        //Gets the initial Data Load for Factions
+        try {
+            URL website = new URL(sourceURL);
+            ReadableByteChannel rbc = Channels.newChannel(website.openStream());
+            FileOutputStream fos = new FileOutputStream("Data/factions.json");
+            fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
+        }
+        catch (MalformedURLException e){
+            System.out.println("Invalid URL passed.");
+        }
+        catch (FileNotFoundException e){
+            System.out.println("The destination file was failed to be created by fos");
+        }
+        catch (IOException e){
+            System.out.println("Transfer Failed for " + sourceURL);
+        }
+        finally {
+            System.gc();
+        }
+
+    }
+    public void getJSONFromURL(String sourceURL, String destination){
+        //Gets the initial Data Load for Factions
+        try {
+            URL website = new URL(sourceURL);
+            ReadableByteChannel rbc = Channels.newChannel(website.openStream());
+            FileOutputStream fos = new FileOutputStream(destination);
+            fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
+        }
+        catch (MalformedURLException e){
+            System.out.println("Invalid URL passed.");
+        }
+        catch (FileNotFoundException e){
+            System.out.println("The destination file was failed to be created by fos");
+        }
+        catch (IOException e){
+            System.out.println("Transfer Failed for " + sourceURL);
+        }
+        finally {
+            System.gc();
+        }
+
+    }
 
     public void getFactionsFromURL(){
         //Gets the initial Data Load for Factions
